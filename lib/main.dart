@@ -1,7 +1,9 @@
 
+import 'package:animationTest/AnimatedTOBE.dart';
 import 'package:animationTest/AnimationSlider.dart';
 import 'package:animationTest/BoxDecorationTest.dart';
 import 'package:animationTest/alignmentAnimationTest.dart';
+import 'package:animationTest/animatedPositionedTest.dart';
 import 'package:flutter/material.dart';
 
 // local screen Files
@@ -152,6 +154,25 @@ class _MyHomePageState extends State<MyHomePage> {
 
   }
 
+  void _showAnimatedPositionedTest(BuildContext context){
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => AnimatedPositionedTest()),
+    );
+  }
+
+  void _showAnimatedTOBE(BuildContext context){
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => AnimatedTOBE()),
+    );
+
+
+  }
+
+
+
+
 
 
 
@@ -277,6 +298,21 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text(" Alignment Animation Test"),
               onPressed: () => _showAlignmentAnimationTest(context),
             )
+            ,
+
+            RaisedButton(
+
+              child: Text(" Animated Positioned Test"),
+              onPressed: () => _showAnimatedPositionedTest(context),
+            )
+
+            ,RaisedButton(
+                child: Text(" Animated TOBE Test"),
+                onPressed: () =>
+                _showAnimatedTOBE(context),
+            )
+
+
 
 
 
